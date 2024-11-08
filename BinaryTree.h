@@ -1,11 +1,13 @@
-typedef struct Node_t
+typedef struct node_t
 {
     int data;
-    Node_t* left;
-    Node_t* right;
-    Node_t* prnt;
-} Node_t;
+    node_t* left;
+    node_t* right;
+    node_t* prnt;
+} node_t;
 
-void Print (Node_t* root);
+void Print (node_t* root);
 
-Node_t* NewNode (int data, Node_t* parrent);
+node_t* NewNode (int data, node_t* parrent);
+
+void ClearTree (node_t* node);

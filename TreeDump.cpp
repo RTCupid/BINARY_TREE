@@ -2,7 +2,7 @@
 
 #include "BinaryTree.h"
 
-void Print (Node_t* node)
+void Print (node_t* node)
 {
     if (!node)
     {

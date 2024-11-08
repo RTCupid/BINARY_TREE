@@ -3,9 +3,9 @@
 
 #include "BinaryTree.h"
 
-Node_t* NewNode (int data, Node_t* parrent)
+node_t* NewNode (int data, node_t* parrent)
 {
-    Node_t* node = (Node_t*)calloc (1, sizeof (*node));
+    node_t* node = (node_t*)calloc (1, sizeof (*node));
     node->data = data;
 
     node->left  = NULL;
@@ -13,5 +13,25 @@ Node_t* NewNode (int data, Node_t* parrent)
     node->prnt  = parrent;
 
     return node;
+}
+
+void ClearTree (node_t* node)
+{
+    if (!node)
+    {
+        return;
+    }
+    if (node->left)
+    {
+        ClearTree (node->left);
+
+    }
+    if (node->right)
+    {
+        ClearTree (node->right);
+    }
+
+    free (node);
+    node = NULL;
 }
 
