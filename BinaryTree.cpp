@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "Binary_tree.h"
+#include "BinaryTree.h"
 
 Node_t* NewNode (int data, Node_t* parrent)
 {
@@ -13,3 +13,4 @@ Node_t* NewNode (int data, Node_t* parrent)
 
     return node;
 }
+
