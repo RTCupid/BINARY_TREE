@@ -1,0 +1,30 @@
+digraph G {
+	rankdir = HR;
+	bgcolor="#FBEEC1"
+	 node111 [shape=Mrecord; style=filled; label =  "{data:  50} | {left: 0x503000000070}  | {right: 0x503000000100} | {prnt: (nil)} " ];
+	 node110 -> node111 [style=bold; weight=1000; ];
+	 node112 [shape=Mrecord; style=filled; label =  "{data:  12} | {left: 0x5030000000a0}  | {right: 0x5030000000d0} | {prnt: 0x503000000040} " ];
+	 node111 -> node112 [style=bold; weight=1000; ];
+	 node113 [shape=Mrecord; style=filled; label =  "{data:   5} | {left: (nil)}  | {right: (nil)} | {prnt: 0x503000000070} " ];
+	 node112 -> node113 [style=bold; weight=1000; ];
+	 node114 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node113 -> node114 [style=bold; weight=1000; ];
+	 node115 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node114 -> node115 [style=bold; weight=1000; ];
+	 node116 [shape=Mrecord; style=filled; label =  "{data:  15} | {left: (nil)}  | {right: (nil)} | {prnt: 0x503000000070} " ];
+	 node115 -> node116 [style=bold; weight=1000; ];
+	 node117 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node116 -> node117 [style=bold; weight=1000; ];
+	 node118 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node117 -> node118 [style=bold; weight=1000; ];
+	 node119 [shape=Mrecord; style=filled; label =  "{data:  70} | {left: 0x503000000130}  | {right: (nil)} | {prnt: 0x503000000040} " ];
+	 node118 -> node119 [style=bold; weight=1000; ];
+	 node120 [shape=Mrecord; style=filled; label =  "{data:  60} | {left: (nil)}  | {right: (nil)} | {prnt: 0x503000000100} " ];
+	 node119 -> node120 [style=bold; weight=1000; ];
+	 node121 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node120 -> node121 [style=bold; weight=1000; ];
+	 node122 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node121 -> node122 [style=bold; weight=1000; ];
+	 node123 [shape=Mrecord; style=filled; label = "null"; ]
+ 	 node122 -> node123 [style=bold; weight=1000; ];
+}

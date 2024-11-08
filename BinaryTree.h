@@ -6,7 +6,9 @@ typedef struct node_t
     node_t* prnt;
 } node_t;
 
-void Print (node_t* root);
+void TreeDump (node_t* root);
+
+void Print (node_t* root, FILE* dot_file);
 
 node_t* NewNode (int data, node_t* parrent);
 

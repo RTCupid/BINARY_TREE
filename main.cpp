@@ -11,10 +11,8 @@ int main ()
     root->right = NewNode (70, root);
     root->right->left = NewNode (60, root->right);
 
-    Print (root);
-    printf ("\n");
+    TreeDump (root);
 
     ClearTree (root);
-
     return 0;
 }
