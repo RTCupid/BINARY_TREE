@@ -18,7 +18,7 @@ a.exe: BinaryTree.o TreeDump.o main.o
 	$(CC) BinaryTree.o main.o TreeDump.o -o a.exe $(FLAGS)
 
 TreeDump.o: TreeDump.cpp BinaryTree.h
-	$(CC) -c ListDump.cpp -o Dump.o $(FLAGS)
+	$(CC) -c TreeDump.cpp -o TreeDump.o $(FLAGS)
 
 BinaryTree.o: BinaryTree.cpp BinaryTree.h
 	$(CC) -c BinaryTree.cpp -o BinaryTree.o $(FLAGS)

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "Binary_tree.h"
+#include "BinaryTree.h"
 
 int main ()
 {
