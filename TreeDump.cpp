@@ -19,21 +19,23 @@ void TreeDump (node_t* root)
 
 void Print (node_t* node, FILE* dot_file)
 {
-    static int numnode = 111;
     if (!node)
     {
-        fprintf (dot_file, "\t node%03d [shape=Mrecord; style=filled; label = \"null\"; ]\n ", numnode);
-        fprintf (dot_file, "\t node%03d -> node%03d [style=bold; weight=1000; ];\n", numnode - 1, numnode);
-        numnode++;
         return;
     }
 
-    fprintf (dot_file, "\t node%03d [shape=Mrecord; style=filled; "
-        "label =  \"{data: %3d} | {left: %p}  | {right: %p} | {prnt: %p} \" ];\n",
-        numnode, node->data, node->left, node->right, node->prnt);
-    fprintf (dot_file, "\t node%03d -> node%03d [style=bold; weight=1000; ];\n", numnode - 1, numnode);
+    fprintf (dot_file, "\t node%p [shape=Mrecord; style=filled; color=\"#BC986A\"; "
+        "label =  \"{node: %p | data: %3d | prnt: %p | {<left>left: %p | <right>right: %p}  }\" ];\n",
+        node, node, node->data, node->prnt, node->left, node->right);
 
-    numnode++;
+    if (node->left)
+    {
+        fprintf (dot_file, "\t node%p:<left> -> node%p [style=bold; weight=1000; ];\n", node, node->left);
+    }
+    if (node->right)
+    {
+        fprintf (dot_file, "\t node%p:<right> -> node%p [style=bold; weight=1000; ];\n", node, node->right);
+    }
 
     /*......LEFT......*/
     Print (node->left, dot_file);
