@@ -3,15 +3,19 @@
 
 #include "BinaryTree.h"
 
+#define PS if(1)
+
 void TreeDump (tree_t* tree)
 {
-    fprintf (tree->log_file, "<FONT SIZE=\"6\"><center>My Binary Tree:</center><FONT SIZE=\"5\">\n\n");
-
     MakeDotFile (tree->root);
 
     system ("dot -Tpng DumpTree.dot -o Tree.png");
 
     fprintf (tree->log_file, "<center><img src = Tree.png ></center>\n\n");
+
+    fclose (tree->log_file);
+
+    PS Pause ();
 }
 
 void MakeDotFile (node_t* root)
@@ -53,4 +57,10 @@ void Print (node_t* node, FILE* dot_file)
 
     /*......RIGHT......*/
     Print (node->right, dot_file);
+}
+
+void Pause ()
+{
+    printf ("Enter to continue...\n");
+    getchar ();
 }

@@ -19,6 +19,8 @@ void TreeDtor (tree_t* tree);
 
 void TreeDump (tree_t* tree);
 
+void Pause ();
+
 void MakeDotFile (node_t* root);
 
 void Print (node_t* root, FILE* dot_file);

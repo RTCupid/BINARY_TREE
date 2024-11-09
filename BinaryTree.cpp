@@ -6,14 +6,17 @@
 void TreeCtor (tree_t* tree)
 {
     tree->root = NewNode (50, NULL);
+
     tree->crnt_node = tree->root;
+
     tree->log_file = fopen ("log_file.htm", "wt");
+
+    fprintf (tree->log_file, "<FONT SIZE=\"6\"><center>My Binary Tree:</center><FONT SIZE=\"5\">\n\n");
 }
 
 void TreeDtor (tree_t* tree)
 {
     ClearTree (tree->root);
-    fclose (tree->log_file);
 }
 
 node_t* NewNode (int data, node_t* parrent)
