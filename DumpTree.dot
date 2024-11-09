@@ -1,7 +1,7 @@
 digraph G {
 	rankdir = HR;
 	bgcolor="#F7F9FB"
-	 node0x503000000040 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000040 | data:  50 | prnt: (nil) | {<left>left: 0x503000000070 | <right>right: 0x503000000100}  }" ];
+	 node0x503000000040 [shape=Mrecord; style=filled; color="#687864"; label =  "{node: 0x503000000040 | data:  50 | prnt: (nil) | {<left>left: 0x503000000070 | <right>right: 0x503000000100}  }" ];
 	 node0x503000000040:<left> -> node0x503000000070 [style=bold; weight=1000; ];
 	 node0x503000000040:<right> -> node0x503000000100 [style=bold; weight=1000; ];
 	 node0x503000000070 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000070 | data:  12 | prnt: 0x503000000040 | {<left>left: 0x5030000000a0 | <right>right: 0x5030000000d0}  }" ];
@@ -16,12 +16,22 @@ digraph G {
 	 node0x5030000000d0:<right> -> node0x503000000160 [style=bold; weight=1000; ];
 	 node0x503000000160 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000160 | data:  20 | prnt: 0x5030000000d0 | {<left>left: (nil) | <right>right: 0x5030000001c0}  }" ];
 	 node0x503000000160:<right> -> node0x5030000001c0 [style=bold; weight=1000; ];
-	 node0x5030000001c0 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x5030000001c0 | data:  40 | prnt: 0x503000000160 | {<left>left: (nil) | <right>right: (nil)}  }" ];
+	 node0x5030000001c0 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x5030000001c0 | data:  40 | prnt: 0x503000000160 | {<left>left: (nil) | <right>right: 0x503000000340}  }" ];
+	 node0x5030000001c0:<right> -> node0x503000000340 [style=bold; weight=1000; ];
+	 node0x503000000340 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000340 | data:  47 | prnt: 0x5030000001c0 | {<left>left: (nil) | <right>right: (nil)}  }" ];
 	 node0x503000000100 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000100 | data:  70 | prnt: 0x503000000040 | {<left>left: 0x503000000130 | <right>right: 0x503000000190}  }" ];
 	 node0x503000000100:<left> -> node0x503000000130 [style=bold; weight=1000; ];
 	 node0x503000000100:<right> -> node0x503000000190 [style=bold; weight=1000; ];
-	 node0x503000000130 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000130 | data:  60 | prnt: 0x503000000100 | {<left>left: (nil) | <right>right: 0x5030000001f0}  }" ];
+	 node0x503000000130 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000130 | data:  60 | prnt: 0x503000000100 | {<left>left: 0x5030000002e0 | <right>right: 0x5030000001f0}  }" ];
+	 node0x503000000130:<left> -> node0x5030000002e0 [style=bold; weight=1000; ];
 	 node0x503000000130:<right> -> node0x5030000001f0 [style=bold; weight=1000; ];
-	 node0x5030000001f0 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x5030000001f0 | data:  65 | prnt: 0x503000000130 | {<left>left: (nil) | <right>right: (nil)}  }" ];
-	 node0x503000000190 [shape=Mrecord; style=filled; color="#687864"; label =  "{node: 0x503000000190 | data:  90 | prnt: 0x503000000100 | {<left>left: (nil) | <right>right: (nil)}  }" ];
+	 node0x5030000002e0 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x5030000002e0 | data:  55 | prnt: 0x503000000130 | {<left>left: (nil) | <right>right: (nil)}  }" ];
+	 node0x5030000001f0 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x5030000001f0 | data:  65 | prnt: 0x503000000130 | {<left>left: (nil) | <right>right: 0x503000000310}  }" ];
+	 node0x5030000001f0:<right> -> node0x503000000310 [style=bold; weight=1000; ];
+	 node0x503000000310 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000310 | data:  67 | prnt: 0x5030000001f0 | {<left>left: (nil) | <right>right: (nil)}  }" ];
+	 node0x503000000190 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000190 | data:  90 | prnt: 0x503000000100 | {<left>left: (nil) | <right>right: 0x503000000280}  }" ];
+	 node0x503000000190:<right> -> node0x503000000280 [style=bold; weight=1000; ];
+	 node0x503000000280 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x503000000280 | data: 110 | prnt: 0x503000000190 | {<left>left: 0x5030000002b0 | <right>right: (nil)}  }" ];
+	 node0x503000000280:<left> -> node0x5030000002b0 [style=bold; weight=1000; ];
+	 node0x5030000002b0 [shape=Mrecord; style=filled; color="#8FC1E3"; label =  "{node: 0x5030000002b0 | data:  95 | prnt: 0x503000000280 | {<left>left: (nil) | <right>right: (nil)}  }" ];
 }
