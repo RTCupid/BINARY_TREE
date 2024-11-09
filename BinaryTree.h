@@ -6,7 +6,18 @@ typedef struct node_t
     node_t* prnt;
 } node_t;
 
-void TreeDump (node_t* root);
+typedef struct
+{
+    node_t* root;
+    node_t* crnt_node;
+    FILE* log_file;
+} tree_t;
+
+void TreeCtor (tree_t* tree);
+
+void TreeDtor (tree_t* tree);
+
+void TreeDump (tree_t* tree);
 
 void MakeDotFile (node_t* root);
 

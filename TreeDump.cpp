@@ -3,19 +3,15 @@
 
 #include "BinaryTree.h"
 
-void TreeDump (node_t* root)
+void TreeDump (tree_t* tree)
 {
-    FILE* log_file = fopen ("log_file.htm", "wt");
+    fprintf (tree->log_file, "<FONT SIZE=\"6\"><center>My Binary Tree:</center><FONT SIZE=\"5\">\n\n");
 
-    fprintf (log_file, "<FONT SIZE=\"6\"><center>My Binary Tree:</center><FONT SIZE=\"5\">\n\n");
-
-    MakeDotFile (root);
+    MakeDotFile (tree->root);
 
     system ("dot -Tpng DumpTree.dot -o Tree.png");
 
-    fprintf (log_file, "<center><img src = Tree.png ></center>\n\n");
-
-    fclose (log_file);
+    fprintf (tree->log_file, "<center><img src = Tree.png ></center>\n\n");
 }
 
 void MakeDotFile (node_t* root)
@@ -25,7 +21,9 @@ void MakeDotFile (node_t* root)
     fprintf (dot_file, "digraph G {\n");
     fprintf (dot_file, "\trankdir = HR;\n");
     fprintf (dot_file, "\tbgcolor=\"#F7F9FB\"\n");
+
     Print (root, dot_file);
+
     fprintf (dot_file, "}\n");
     fclose (dot_file);
 }

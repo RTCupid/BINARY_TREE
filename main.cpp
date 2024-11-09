@@ -4,15 +4,16 @@
 
 int main ()
 {
-    node_t* root = NewNode (50, NULL);
-    root->left = NewNode (12, root);
-    root->left->left = NewNode (5, root->left);
-    root->left->right = NewNode (15, root->left);
-    root->right = NewNode (70, root);
-    root->right->left = NewNode (60, root->right);
+    tree_t tree = {};
+    TreeCtor (&tree);
+    tree.root->left = NewNode (12, tree.root);
+    tree.root->left->left = NewNode (5, tree.root->left);
+    tree.root->left->right = NewNode (15, tree.root->left);
+    tree.root->right = NewNode (70, tree.root);
+    tree.root->right->left = NewNode (60, tree.root->right);
 
-    TreeDump (root);
+    TreeDump (&tree);
 
-    ClearTree (root);
+    TreeDtor (&tree);
     return 0;
 }
