@@ -5,16 +5,29 @@
 
 void TreeDump (node_t* root)
 {
+    FILE* log_file = fopen ("log_file.htm", "wt");
+
+    fprintf (log_file, "<FONT SIZE=\"6\"><center>My Binary Tree:</center><FONT SIZE=\"5\">\n\n");
+
+    MakeDotFile (root);
+
+    system ("dot -Tpng DumpTree.dot -o Tree.png");
+
+    fprintf (log_file, "<center><img src = Tree.png ></center>\n\n");
+
+    fclose (log_file);
+}
+
+void MakeDotFile (node_t* root)
+{
     FILE* dot_file = fopen ("DumpTree.dot", "wt");
 
     fprintf (dot_file, "digraph G {\n");
     fprintf (dot_file, "\trankdir = HR;\n");
-    fprintf (dot_file, "\tbgcolor=\"#FBEEC1\"\n");
+    fprintf (dot_file, "\tbgcolor=\"#F7F9FB\"\n");
     Print (root, dot_file);
     fprintf (dot_file, "}\n");
     fclose (dot_file);
-
-    system ("dot -Tpng DumpTree.dot -o Tree.png");
 }
 
 void Print (node_t* node, FILE* dot_file)
@@ -24,7 +37,7 @@ void Print (node_t* node, FILE* dot_file)
         return;
     }
 
-    fprintf (dot_file, "\t node%p [shape=Mrecord; style=filled; color=\"#BC986A\"; "
+    fprintf (dot_file, "\t node%p [shape=Mrecord; style=filled; color=\"#8FC1E3\"; "
         "label =  \"{node: %p | data: %3d | prnt: %p | {<left>left: %p | <right>right: %p}  }\" ];\n",
         node, node, node->data, node->prnt, node->left, node->right);
 

@@ -8,6 +8,8 @@ typedef struct node_t
 
 void TreeDump (node_t* root);
 
+void MakeDotFile (node_t* root);
+
 void Print (node_t* root, FILE* dot_file);
 
 node_t* NewNode (int data, node_t* parrent);
